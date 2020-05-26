@@ -10,6 +10,10 @@ function getValueFromElement(tag) {
   return getElement(tag).value;
 }
 
+function displayResult(result) {
+  getElement('#factorial-result').innerHTML = result
+}
+
 function validate(value, flag, compareValue) {
   switch (flag) {
     case REQUIRED:
@@ -43,10 +47,6 @@ function calculateFactorial(number) {
       'Invalid input - either the number is to big or it is not a number'
     );
   }
-}
-
-function displayResult(result) {
-  getElement('#factorial-result').innerHTML = result
 }
 
 function factorialHandler(event) {
